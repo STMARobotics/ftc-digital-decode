@@ -27,22 +27,21 @@ public class auto extends LinearOpMode {
 
 
         ElapsedTime timer = new ElapsedTime();
-        timer.reset();
 
         waitForStart();
+        timer.reset();
         while (opModeIsActive()) {
-            while (timer.time() < 1) {
-            frontLeft.setPower(1);
-            frontRight.setPower(1);
-            rearRight.setPower(1);
-            rearLeft.setPower(1);
+            while (timer.time() < 1.0) {
+                frontLeft.setPower(1);
+                frontRight.setPower(1);
+                rearRight.setPower(1);
+                rearLeft.setPower(1);
             }
-        if (timer.time() > 1) {
             frontLeft.setPower(0);
             frontRight.setPower(0);
             rearRight.setPower(0);
             rearLeft.setPower(0);
-        }
+
         }
     }
 }
