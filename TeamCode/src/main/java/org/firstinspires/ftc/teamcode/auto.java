@@ -37,10 +37,19 @@ public class auto extends LinearOpMode {
                 rearRight.setPower(1);
                 rearLeft.setPower(1);
             }
-            frontLeft.setPower(0);
-            frontRight.setPower(0);
-            rearRight.setPower(0);
-            rearLeft.setPower(0);
+            while (timer.time() < 1.5) {
+                frontRight.setPower(-1);
+                rearRight.setPower(-1);
+                frontLeft.setPower(1);
+                rearLeft.setPower(1);
+            }
+            while (timer.time() < 2.0) {
+                Launcher.setPower(1);
+                frontLeft.setPower(0);
+                frontRight.setPower(0);
+                rearRight.setPower(0);
+                rearLeft.setPower(0);
+            }
 
         }
     }
